@@ -63,7 +63,7 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>Administracion</b>V2',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -130,7 +130,7 @@ return [
     */
 
     'usermenu_enabled' => true,
-    'usermenu_header' => false,
+    'usermenu_header' => true,
     'usermenu_header_class' => 'bg-primary',
     'usermenu_image' => false,
     'usermenu_desc' => false,
@@ -150,7 +150,7 @@ return [
 
     'layout_topnav' => null,
     'layout_boxed' => null,
-    'layout_fixed_sidebar' => null,
+    'layout_fixed_sidebar' => true,
     'layout_fixed_navbar' => null,
     'layout_fixed_footer' => null,
     'layout_dark_mode' => null,
@@ -167,12 +167,12 @@ return [
     |
     */
 
-    'classes_auth_card' => 'card-outline card-primary',
+    'classes_auth_card' => 'card-outline card-dark',
     'classes_auth_header' => '',
     'classes_auth_body' => '',
-    'classes_auth_footer' => '',
+    'classes_auth_footer' => 'text-center',
     'classes_auth_icon' => '',
-    'classes_auth_btn' => 'btn-flat btn-primary',
+    'classes_auth_btn' => 'btn-flat btn-dark',
 
     /*
     |--------------------------------------------------------------------------
@@ -253,7 +253,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'home',
+    'dashboard_url' => 'admin',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
@@ -293,7 +293,7 @@ return [
         // Navbar items:
         [
             'type'         => 'navbar-search',
-            'text'         => 'search',
+            'text'         => 'Busqueda',
             'topnav_right' => true,
         ],
         [
@@ -310,6 +310,53 @@ return [
             'text' => 'blog',
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
+        ],
+        [
+            'text' => 'Dashboard',
+            'url'  => 'admin',
+            'icon' => 'fa fa-fw fa-home'
+        ],
+        [
+            'text' => 'Arrendatarios',
+            'icon' => 'fa fa-fw fa-users',
+            'submenu' => [
+                [
+                    'text' => 'Administar arrendatario',
+                    'url'  => 'admin/usuarios',
+                ],
+                [
+                    'text' => 'Registrar arrendatario',
+                    'url'  => 'admin/usuarios/add',
+                ],
+            ],
+        ],
+        [
+            'text' => 'Cobros',
+            'icon' => 'fa fa-fw fa-dollar-sign',
+            'submenu' => [
+                [
+                    'text' => 'Administar cobros',
+                    'url'  => 'admin/cobros',
+                ],
+                [
+                    'text' => 'Añadir cobro',
+                    'url'  => 'admin/cobros/add',
+                ],
+            ],
+        ],
+        [
+            'text' => 'Pagos',
+            'icon' => 'fa fa-fw fa-money-bill',
+            'submenu' => [
+                [
+                    'text' => 'Administar pagos',
+                    'url'  => 'admin/pagos',
+                ],
+                [
+                    'text' => 'Registrar pago',
+                    'url'  => 'admin/pagos/add',
+                ],
+            ],
         ],
         [
             'text'        => 'pages',
