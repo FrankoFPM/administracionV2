@@ -3,26 +3,38 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>Menu Principal</h1>
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0">Menu Principal</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="admin/">Home</a></li>
+                        <li class="breadcrumb-item active">Menu Principal</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
 @stop
 
 @section('content')
     <div class="container-fluid">
         <div class="row">
             <!--//*notas arrendatarios*//-->
-
             <div class="col-lg-3 col-6">
                 <!-- small box -->
                 <div class="small-box bg-warning">
                     <div class="inner">
                         <h3>5</h3>
-
                         <p>Total de usuarios</p>
                     </div>
                     <div class="icon">
                         <i class="fas fa-fw fa-user-plus"></i>
                     </div>
-                    <a href="http://192.168.1.234:8080/Administracion/admin/arrendatario/index.php"
+                    <a href="admin/usuarios"
                         class="small-box-footer">Mas Informacion<i class="fas fa-arrow-circle-right"
                             aria-hidden="true"></i></a>
                 </div>
@@ -37,7 +49,7 @@
                     <div class="icon">
                         <i class="fas fa-fw fa-chart-bar"></i>
                     </div>
-                    <a href="http://192.168.1.234:8080/Administracion/admin/cobros/index.php" class="small-box-footer">Mas
+                    <a href="admin/cobros" class="small-box-footer">Mas
                         informacion<i class="fas fa-arrow-circle-right" aria-hidden="true"></i></a>
                 </div>
             </div>
@@ -53,7 +65,7 @@
                     <div class="icon">
                         <i class="fas fa-fw fa-wallet"></i>
                     </div>
-                    <a href="http://192.168.1.234:8080/Administracion/admin/cobros/index.php" class="small-box-footer">Mas
+                    <a href="admin/cobros" class="small-box-footer">Mas
                         Informacion<i class="fas fa-arrow-circle-right" aria-hidden="true"></i></a>
                 </div>
             </div>
@@ -69,7 +81,7 @@
                     <div class="icon">
                         <i class="fas fa-fw fa-chart-pie"></i>
                     </div>
-                    <a href="http://192.168.1.234:8080/Administracion/admin/pagos/index.php" class="small-box-footer">Mas
+                    <a href="admin/pagos" class="small-box-footer">Mas
                         informacion<i class="fas fa-arrow-circle-right" aria-hidden="true"></i></a>
                 </div>
             </div>
@@ -130,19 +142,19 @@
 @stop
 
 @section('css')
-    
+
 @stop
 
 @section('js')
     <script>
         console.log('Hi!');
         // The Calender
-    $(function() {
-        $('#calendar').datetimepicker({
-            locale: 'es',
-            format: 'L',
-            inline: true,
+        $(function() {
+            $('#calendar').datetimepicker({
+                locale: 'es',
+                format: 'L',
+                inline: true,
+            });
         });
-    });
     </script>
 @stop
