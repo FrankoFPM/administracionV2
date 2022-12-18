@@ -20,7 +20,7 @@
                         <p>Total de usuarios</p>
                     </div>
                     <div class="icon">
-                        <i class="ion ion-person-add"></i>
+                        <i class="fas fa-fw fa-user-plus"></i>
                     </div>
                     <a href="http://192.168.1.234:8080/Administracion/admin/arrendatario/index.php"
                         class="small-box-footer">Mas Informacion<i class="fas fa-arrow-circle-right"
@@ -35,7 +35,7 @@
                         <p>Deuda general</p>
                     </div>
                     <div class="icon">
-                        <i class="ion ion-stats-bars"></i>
+                        <i class="fas fa-fw fa-chart-bar"></i>
                     </div>
                     <a href="http://192.168.1.234:8080/Administracion/admin/cobros/index.php" class="small-box-footer">Mas
                         informacion<i class="fas fa-arrow-circle-right" aria-hidden="true"></i></a>
@@ -51,7 +51,7 @@
                         <p>Usuarios en deuda</p>
                     </div>
                     <div class="icon">
-                        <i class="ion ion-bag"></i>
+                        <i class="fas fa-fw fa-wallet"></i>
                     </div>
                     <a href="http://192.168.1.234:8080/Administracion/admin/cobros/index.php" class="small-box-footer">Mas
                         Informacion<i class="fas fa-arrow-circle-right" aria-hidden="true"></i></a>
@@ -67,7 +67,7 @@
                         <p>Mora general</p>
                     </div>
                     <div class="icon">
-                        <i class="ion ion-pie-graph"></i>
+                        <i class="fas fa-fw fa-chart-pie"></i>
                     </div>
                     <a href="http://192.168.1.234:8080/Administracion/admin/pagos/index.php" class="small-box-footer">Mas
                         informacion<i class="fas fa-arrow-circle-right" aria-hidden="true"></i></a>
@@ -82,7 +82,7 @@
                 <div class="card bg-gradient-success">
                     <div class="card-header border-0">
                         <h3 class="card-title">
-                            <i class="far fa-calendar-alt" aria-hidden="true"></i>
+                            <i class="far fa-calendar-alt"></i>
                             Calendario
                         </h3>
                         <!-- tools card -->
@@ -91,7 +91,7 @@
                             <div class="btn-group">
                             </div>
                             <button type="button" class="btn btn-success btn-sm" data-card-widget="collapse">
-                                <i class="fas fa-minus" aria-hidden="true"></i>
+                                <i class="fas fa-minus"></i>
                             </button>
                         </div>
                         <!-- /. tools -->
@@ -99,6 +99,7 @@
                     <!-- /.card-header -->
                     <div class="card-body pt-0">
                         <!--The calendar -->
+                        <div id="calendar" style="width: 100%"></div>
                     </div>
                     <!-- /.card-body -->
                 </div>
@@ -135,5 +136,13 @@
 @section('js')
     <script>
         console.log('Hi!');
+        // The Calender
+    $(function() {
+        $('#calendar').datetimepicker({
+            locale: 'es',
+            format: 'L',
+            inline: true,
+        });
+    });
     </script>
 @stop
