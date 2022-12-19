@@ -34,8 +34,7 @@
                     <div class="icon">
                         <i class="fas fa-fw fa-user-plus"></i>
                     </div>
-                    <a href="admin/usuarios"
-                        class="small-box-footer">Mas Informacion<i class="fas fa-arrow-circle-right"
+                    <a href="admin/usuarios" class="small-box-footer">Mas Informacion<i class="fas fa-arrow-circle-right"
                             aria-hidden="true"></i></a>
                 </div>
             </div>
@@ -141,6 +140,16 @@
     </div>
 @stop
 
+@section('footer')
+    <div class="float-right d-none d-sm-inline">
+        @php
+            $user = auth()->user();
+            $name = $user->name;
+        @endphp
+        {{ $name }}
+    </div>
+    <strong>Copyright &copy; 2022 <a href="#">Franco Pérez</a>.</strong> All rights reserved.
+@stop
 @section('css')
 
 @stop
