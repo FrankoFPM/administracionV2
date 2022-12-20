@@ -118,9 +118,8 @@
                             </button>
                         </div>
                     </div>
-                    <div class="card-body align-self-center">
-                        <canvas id="donutChart"
-                            style="min-height: 221px; height: 221px; max-height: 221px; max-width: 100%;"></canvas>
+                    <div class="card-body">
+                        <canvas id="donutChart" style="min-height: 160px; height: 180px; max-height: 221px; max-width: 100%;"></canvas>
                     </div>
                     <!-- /.card-body -->
                 </div>
@@ -153,6 +152,52 @@
                 format: 'L',
                 inline: true,
             });
+        });
+
+        const ctx = document.getElementById('donutChart').getContext('2d');
+
+        var labels = [];
+        var data = [];
+        @if (count($chartU)>0)
+        @foreach ($chartU as $client)
+            labels.push('{{ $client->NOMBRE }}');
+            data.push('{{ $client->TOTAL }}');
+        @endforeach
+        @else
+        labels.push('Registre');
+        data.push(100);
+        @endif
+
+        const myChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Deuda',
+                    data: data,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderWidth: 2,
+                    hoverOffset: 10
+                }]
+            },
+            options: {
+                responsive: true
+            }
         });
     </script>
 @stop

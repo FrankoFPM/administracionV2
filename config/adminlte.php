@@ -538,17 +538,17 @@ return [
             ],
         ],
         'Chartjs' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
                     'asset' => true,
-                    'location' => 'vendor/chartjs/Chart.bundle.min.js',
+                    'location' => 'vendor/chart.js/Chart.bundle.min.js',
                 ],
                 [
                     'type' => 'css',
                     'asset' => true,
-                    'location' => 'vendor/chartjs/Chart.min.css',
+                    'location' => 'vendor/chart.js/Chart.min.css',
                 ],
             ],
         ],
