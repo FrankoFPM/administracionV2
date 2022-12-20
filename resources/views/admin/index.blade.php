@@ -23,70 +23,60 @@
 @section('content')
     <div class="container-fluid">
         <div class="row">
-            <!--//*notas arrendatarios*//-->
             <div class="col-lg-3 col-6">
-                <!-- small box -->
                 <div class="small-box bg-warning">
                     <div class="inner">
-                        <h3>5</h3>
+                        <h3>{{ $count }}</h3>
                         <p>Total de usuarios</p>
                     </div>
                     <div class="icon">
                         <i class="fas fa-fw fa-user-plus"></i>
                     </div>
-                    <a href="admin/usuarios" class="small-box-footer">Mas Informacion<i class="fas fa-arrow-circle-right"
+                    <a href="admin/usuarios" class="small-box-footer">Más Informacion<i class="fas fa-arrow-circle-right"
                             aria-hidden="true"></i></a>
                 </div>
             </div>
-            <!--//!notas cobrar*//-->
             <div class="col-lg-3 col-6">
                 <div class="small-box bg-success">
                     <div class="inner">
-                        <h3>3177.00<sup style="font-size: 20px">$</sup></h3>
+                        <h3>{{ $total ?? 0 }}<sup style="font-size: 20px">$</sup></h3>
                         <p>Deuda general</p>
                     </div>
                     <div class="icon">
                         <i class="fas fa-fw fa-chart-bar"></i>
                     </div>
-                    <a href="admin/cobros" class="small-box-footer">Mas
+                    <a href="admin/cobros" class="small-box-footer">Más
                         informacion<i class="fas fa-arrow-circle-right" aria-hidden="true"></i></a>
                 </div>
             </div>
-            <!--//?notas deuda*//-->
             <div class="col-lg-3 col-6">
-                <!-- small box -->
                 <div class="small-box bg-info">
                     <div class="inner">
-                        <h3>2</h3>
-
+                        <h3>{{ $usuarios ?? 0 }}</h3>
                         <p>Usuarios en deuda</p>
                     </div>
                     <div class="icon">
                         <i class="fas fa-fw fa-wallet"></i>
                     </div>
-                    <a href="admin/cobros" class="small-box-footer">Mas
+                    <a href="admin/cobros" class="small-box-footer">Más
                         Informacion<i class="fas fa-arrow-circle-right" aria-hidden="true"></i></a>
                 </div>
             </div>
-            <!--//*notas mora*//-->
             <div class="col-lg-3 col-6">
-                <!-- small box -->
                 <div class="small-box bg-danger">
                     <div class="inner">
-                        <h3>0.00<sup style="font-size: 20px">$</sup></h3>
-
+                        <h3>{{ $mora ?? 0 }}<sup style="font-size: 20px">$</sup></h3>
                         <p>Mora general</p>
                     </div>
                     <div class="icon">
                         <i class="fas fa-fw fa-chart-pie"></i>
                     </div>
-                    <a href="admin/pagos" class="small-box-footer">Mas
+                    <a href="admin/pagos" class="small-box-footer">Más
                         informacion<i class="fas fa-arrow-circle-right" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
-
-        <!-- //TODO Wigets -->
+        <!-- Wigets -->
         <div class="row">
             <div class="col-lg-6">
                 <!-- Calendar -->
@@ -124,14 +114,13 @@
 
                         <div class="card-tools">
                             <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                                <i class="fas fa-minus" aria-hidden="true"></i>
+                                <i class="fas fa-minus"></i>
                             </button>
                         </div>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body align-self-center">
                         <canvas id="donutChart"
-                            style="min-height: 221px; height: 220.87px; max-height: 221px; max-width: 100%; display: block; box-sizing: border-box; width: 219.13px;"
-                            width="252" height="254"></canvas>
+                            style="min-height: 221px; height: 221px; max-height: 221px; max-width: 100%;"></canvas>
                     </div>
                     <!-- /.card-body -->
                 </div>
