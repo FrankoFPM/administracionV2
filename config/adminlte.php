@@ -328,6 +328,9 @@ return [
                     'text' => 'Registrar arrendatario',
                     'url'  => 'admin/usuarios/add',
                 ],
+                [
+                    'url'  => 'admin/usuarios/edit',
+                ],
             ],
         ],
         [
@@ -543,13 +546,13 @@ return [
                 [
                     'type' => 'js',
                     'asset' => true,
-                    'location' => 'vendor/chart.js/Chart.bundle.min.js',
+                    'location' => 'vendor/chart.js/chart.umd.js',
                 ],
-                [
+                /* [
                     'type' => 'css',
                     'asset' => true,
                     'location' => 'vendor/chart.js/Chart.min.css',
-                ],
+                ], */
             ],
         ],
         'Sweetalert2' => [
