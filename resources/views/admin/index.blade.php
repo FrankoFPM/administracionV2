@@ -119,7 +119,8 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <canvas id="donutChart" style="min-height: 160px; height: 180px; max-height: 221px; max-width: 100%;"></canvas>
+                        <canvas id="donutChart"
+                            style="min-height: 221px; height: 221px; max-height: 221px; max-width: 100%; display:unset;"></canvas>
                     </div>
                     <!-- /.card-body -->
                 </div>
@@ -158,14 +159,14 @@
 
         var labels = [];
         var data = [];
-        @if (count($chartU)>0)
-        @foreach ($chartU as $client)
-            labels.push('{{ $client->NOMBRE }}');
-            data.push('{{ $client->TOTAL }}');
-        @endforeach
+        @if (count($chartU) > 0)
+            @foreach ($chartU as $client)
+                labels.push('{{ $client->NOMBRE }}');
+                data.push('{{ $client->TOTAL }}');
+            @endforeach
         @else
-        labels.push('Registre');
-        data.push(100);
+            labels.push('Registre');
+            data.push(100);
         @endif
 
         const myChart = new Chart(ctx, {
@@ -199,5 +200,9 @@
                 responsive: true
             }
         });
+        var donutOptions = {
+            maintainAspectRatio: false,
+            responsive: true,
+        }
     </script>
 @stop
