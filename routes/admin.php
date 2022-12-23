@@ -10,4 +10,5 @@ Route::controller(UsuarioController::class)->group(function(){
     Route::get('/usuarios','index');
     Route::get('/usuarios/add','create');
     Route::get('/usuarios/edit','edit');
+    Route::delete('/usuarios/delete/{id}','delete')->name('delete');
 });
