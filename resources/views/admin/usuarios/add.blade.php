@@ -11,7 +11,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="admin/">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Home</a></li>
                         <li class="breadcrumb-item active">Añadir arrendatario</li>
                     </ol>
                 </div>
@@ -25,7 +25,8 @@
         <div class="card-header">
             <h3 class="card-title">Registrar arrendatario</h3>
         </div>
-        <form method="get">
+        <form method="POST" action="add/register">
+            @csrf
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-6">
@@ -102,5 +103,10 @@
 @section('js')
     <script>
         console.log('Hi!');
+        //Datemask dd/mm/yyyy
+        $('#datemask').inputmask('dd/mm/yyyy', {
+            'placeholder': 'dd/mm/yyyy'
+        })
+        $('[data-mask]').inputmask();
     </script>
 @stop
