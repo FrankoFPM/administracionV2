@@ -18,19 +18,36 @@ class UsuarioController extends Controller
     {
         return view('admin.usuarios.add');
     }
-    public function edit()
+    public function edit(inclino $inclino)
     {
-        return view('admin.usuarios.edit');
+        return view('admin.usuarios.edit', compact('inclino'));
     }
     public function delete($id)
     {
         $record = inclino::find($id);
         abort_if($record === null, 404, 'Record not found');
         $record->delete();
-        return response()->json([
-            'success' => true,
-            'message' => 'Record deleted'
-        ]);
-        //return redirect()->back();
+    }
+    public function register(Request $request)
+    {
+        $user = new inclino;
+        $user->nombre = $request->input('nombre');
+        $user->piso = $request->input('piso');
+        $user->valor_alq = $request->input('precio');
+        $user->total_personas = $request->input('familia');
+        $user->fecha_ingreso = $request->input('fecha_ingreso');
+        $user->save();
+
+        return redirect('admin/usuarios')->with('SUCCESS', true);
+    }
+    public function update(Request $request,inclino $inclino){
+        $inclino->nombre = $request->input('nombre');
+        $inclino->piso = $request->input('piso');
+        $inclino->valor_alq = $request->input('precio');
+        $inclino->total_personas = $request->input('familia');
+        $inclino->fecha_ingreso = $request->input('fecha_ingreso');
+
+        $inclino->save();
+        return redirect('admin/usuarios')->with('EDIT', true);
     }
 }
