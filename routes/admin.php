@@ -19,4 +19,9 @@ Route::controller(UsuarioController::class)->group(function(){
 Route::controller(CobrosController::class)->group(function(){
     Route::get('/cobros', 'index')->name('cobros.dashboard');
     Route::get('/cobros/add', 'create')->name('cobros.add');
+    Route::get('/cobros/search/{inclino}', 'search')->name('cobros.search');
+    Route::post('/cobros/add/register','register');
+    Route::get('/cobros/{cobro}','edit')->name('cobros.edit');
+    Route::put('/cobros/update/{cobro}', 'update')->name('cobros.update');
+    Route::delete('/cobros/delete/{cobro}','delete')->name('cobros.delete');
 });
