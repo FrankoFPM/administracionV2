@@ -248,7 +248,7 @@ $(document).ready(function() {
         "lengthChange": false,
         "autoWidth": false,
         columnDefs: [{
-                targets: 6,
+                targets: -1,
                 width: "180px"
             },
             {
