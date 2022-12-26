@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\Cobros\CobrosController;
 use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\Pagos\PagosController;
 use App\Http\Controllers\Admin\Usuario\UsuarioController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,4 +25,11 @@ Route::controller(CobrosController::class)->group(function(){
     Route::get('/cobros/{cobro}','edit')->name('cobros.edit');
     Route::put('/cobros/update/{cobro}', 'update')->name('cobros.update');
     Route::delete('/cobros/delete/{cobro}','delete')->name('cobros.delete');
+});
+
+Route::controller(PagosController::class)->group(function(){
+    Route::get('/pagos', 'index')->name('pagos.dashboard');
+    Route::get('/pagos/add', 'create')->name('pagos.add');
+    Route::get('/pagos/search/{cobro}', 'search')->name('pagos.search');
+    Route::post('/pagos/add/register','register');
 });
