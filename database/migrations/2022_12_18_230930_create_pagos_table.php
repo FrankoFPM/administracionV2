@@ -59,7 +59,7 @@ return new class extends Migration
             $table->decimal('importe_pagado', $precision = 6, $scale = 2);
             $table->decimal('mora', $precision = 6, $scale = 2);
             $table->decimal('pago_mora', $precision = 6, $scale = 2);
-            $table->decimal('fecha_pago', $precision = 6, $scale = 2);
+            $table->date('fecha_pago');
             $table->decimal('importe_final', $precision = 6, $scale = 2);
             $table->decimal('pago_final', $precision = 6, $scale = 2);
             $table->decimal('deuda_actual', $precision = 6, $scale = 2);
