@@ -45,7 +45,7 @@
                         <td>{{ $item->fecha_ingreso }}</td>
                         <td>
                             <a href="usuarios/edit/{{ $item->id }}" class="btn btn-primary btn-warning"><i
-                                    class="fa fa-pen-to-square"></i>&nbsp;Editar</a>
+                                    class="fa fa-pencil-alt"></i>&nbsp;Editar</a>
                             <a href="#" class="btn btn-primary btn-danger elimnarReg"
                                 onclick="eliminar({{ $item->id }});"><i class="fa fa-eraser"></i></i>&nbsp;Eliminar</a>
                         </td>

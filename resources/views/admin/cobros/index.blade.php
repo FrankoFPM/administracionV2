@@ -52,8 +52,7 @@
                         <td>{{ $cobro->serv_extra }}</td>
                         <td>{{ $cobro->total }}</td>
                         <td>
-                            <a href="cobros/{{ $cobro->id }}" class="btn btn-primary btn-success"><i
-                                    class="fa fa-sack-dollar"></i></i>&nbsp;Cobrar</a>
+                            <a href="cobros/{{ $cobro->id }}" class="btn btn-primary btn-success"><i class="fa fa-dollar-sign"></i>&nbsp;Cobrar</a>
                             <a href="#" class="btn btn-danger btn-primary elimnarReg"
                                 onclick="eliminar({{ $cobro->id }});"><i class="fa fa-eraser"></i></i>&nbsp;Eliminar</a>
                         </td>

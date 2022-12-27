@@ -54,8 +54,8 @@
                         <td>{{ $cobro->pago_final }}</td>
                         <td>{{ $cobro->deuda_actual }}</td>
                         <td>
-                            <a href="cobros/{{ $cobro->id }}" class="btn btn-primary btn-success"><i
-                                    class="fa fa-sack-dollar"></i>&nbsp;Generar recibo</a>
+                            <a href="pagos/{{ $cobro->id }}" class="btn btn-primary btn-success"><i
+                                    class="fa fa-file-pdf"></i>&nbsp;Generar recibo</a>
                         </td>
                     </tr>
                 @endforeach
@@ -87,7 +87,7 @@
             </div>
             <div class="card-body">
                 <div class="col-md-7">
-                    <a href="cobros/add" class="btn btn-app bg-success">
+                    <a href="pagos/add" class="btn btn-app bg-success">
                         <span class="badge bg-purple">{{ $count }}</span>
                         <i class="fas fa-dollar-sign"></i>
                         <h6>Registrar pago</h6>
