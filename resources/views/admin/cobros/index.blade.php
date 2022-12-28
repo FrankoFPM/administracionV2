@@ -130,6 +130,16 @@
             timerProgressBar: true,
         })
         @endif
+        @if (session('EXITO'))
+        Swal.fire({
+            html: '<video width="70%"autoplay src="../video/hecho.mp4"></video><br><p>Cobro registrado!</p>',
+            icon: 'success',
+            type: 'success',
+            title: 'Registrado!',
+            timer: 10000,
+            timerProgressBar: true,
+        })
+        @endif
         function eliminar(id) {
             Swal.fire({
                 title: 'Estas seguro?',
