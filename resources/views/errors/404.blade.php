@@ -21,24 +21,13 @@
             width: 40%;
         }
 
-        .nube {
-            width: 400px;
-            height: 100px;
-            border-radius: 50%;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-            background-color: rgb(211, 255, 247);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
         .panel {
             position: absolute;
             bottom: 0;
             right: 0;
-            width: 40%;
-            border-left: 250px solid transparent;
-            border-bottom: 100vh solid orange;
+            width: 51%;
+            /* border-left: 250px solid transparent; */
+            border-bottom: 100vh solid #f9ba85;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -55,12 +44,34 @@
             top: 239px;
             font-size: 100px;
         }
+        .title2 {
+            position: absolute;
+            top: 400px;
+            font-size: 50px;
+        }
+        .btn{
+            position: absolute;
+            top: 600px;
+            font-size: 24px;
+            text-decoration: none;
+            background-color: white;
+            padding: 20px 20px;
+            border-radius: 20px;
+            color: brown;
+            font-weight: bold;
+        }
+        .btn:hover{
+            background-color: #c6365b;
+            color: white;
+        }
     </style>
 </head>
 <div class="container">
     <img src="{{ asset('img/404.png') }}" alt="sorry">
     <div class="panel">
         <h1 class="title">404</h1>
+        <h2 class="title2">Pagina no encontrada</h2>
+        <a href="{{ route('admin.dashboard') }}" class="btn">Volver al menu principal</a>
     </div>
 </div>
 
