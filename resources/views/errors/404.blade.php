@@ -18,41 +18,45 @@
         img {
             position: absolute;
             bottom: 0px;
-            width: 40%;
+            width: 40vw;
+            display: block
         }
 
         .panel {
             position: absolute;
             bottom: 0;
             right: 0;
-            width: 51%;
-            /* border-left: 250px solid transparent; */
-            border-bottom: 100vh solid #f9ba85;
+            width: 53vw;
+            height: 100vh;
+            background-color: #f9ba85;
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: space-around;
+
+        }
+
+        .panel2 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
         }
 
         .container {
-            position: relative;
-            width: 100vw;
-            height: 100vh;
+            /* width: 100vw;
+            height: 100vh; */
         }
 
         .title {
-            position: absolute;
-            top: 239px;
-            font-size: 100px;
+            font-size: 6vw;
         }
+
         .title2 {
-            position: absolute;
-            top: 400px;
-            font-size: 50px;
+            font-size: 3vw;
         }
-        .btn{
-            position: absolute;
-            top: 600px;
-            font-size: 24px;
+
+        .btn {
+            font-size: 2vw;
             text-decoration: none;
             background-color: white;
             padding: 20px 20px;
@@ -60,18 +64,51 @@
             color: brown;
             font-weight: bold;
         }
-        .btn:hover{
+
+        .btn:hover {
             background-color: #c6365b;
             color: white;
+        }
+
+        @media only screen and (max-width: 1000px) {
+            .panel {
+                position: absolute;
+                top: 0;
+                width: 100vw;
+                height: 44vh;
+            }
+
+            .title {
+                font-size: 6vh;
+            }
+
+            .title2 {
+                font-size: 3vh;
+            }
+
+            .btn {
+                font-size: 2vh;
+            }
+
+            img {
+                max-height: 50vh;
+                width: auto;
+                margin: auto;
+                left: 50%;
+                transform: translate(-50%, 0%);
+            }
+
         }
     </style>
 </head>
 <div class="container">
     <img src="{{ asset('img/404.png') }}" alt="sorry">
     <div class="panel">
-        <h1 class="title">404</h1>
-        <h2 class="title2">Pagina no encontrada</h2>
-        <a href="{{ route('admin.dashboard') }}" class="btn">Volver al menu principal</a>
+        <div class="panel2">
+            <h1 class="title">404</h1>
+            <h2 class="title2">Pagina no encontrada</h2>
+            <a href="{{ route('admin.dashboard') }}" class="btn">Volver al menu principal</a>
+        </div>
     </div>
 </div>
 
