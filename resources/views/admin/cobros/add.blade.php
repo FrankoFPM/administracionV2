@@ -53,7 +53,7 @@
                         <!--//?huespedes-->
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Número de huespedes</label>
+                                <label>Número de huespedes</label>
                                 <input type="text" class="form-control" id="totalpersonas" placeholder="Nº de compañeros"
                                     name="familia" readonly="readonly" onchange="calcularagua();">
                             </div>
@@ -76,10 +76,10 @@
                         <!--//?Precio inicial-->
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Alquiler</label>
+                                <label>Alquiler</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text">$</span>
+                                        <span class="input-group-text"><i class="fa fa-dollar-sign"></i></span>
                                     </div>
                                     <input type="text" class="form-control" name="precio" readonly="readonly"
                                         id="valor_alq">
@@ -94,7 +94,7 @@
                         <!--//?tarifa luz-->
                         <div class="col-md-2">
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Consumo de luz</label>
+                                <label>Consumo de luz</label>
                                 <div class="input-group mb-3">
                                     <input type="text" class="form-control" id="tarifa_luz" placeholder="00.00"
                                         name="tarifa_luz" onchange="sumarluz();">
@@ -108,13 +108,13 @@
                         <!--//?precio Kwh-->
                         <div class="col-md-2">
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Precio por kWh</label>
+                                <label>Precio por kWh</label>
 
                                 <div class="input-group mb-3">
                                     <input type="text" class="form-control" id="kwh" placeholder="00.00"
                                         name="kwh" value="0.6517" onchange="sumarluz();">
                                     <div class="input-group-append">
-                                        <span class="input-group-text">$</span>
+                                        <span class="input-group-text"><i class="fa fa-dollar-sign"></i></span>
                                     </div>
                                 </div>
                             </div>
@@ -122,7 +122,7 @@
                         <!--//?IGV-->
                         <div class="col-md-2">
                             <div class="form-group">
-                                <label for="exampleInputPassword1">IGV</label>
+                                <label>IGV</label>
 
                                 <div class="input-group mb-3">
                                     <input type="text" class="form-control" id="igv" placeholder="00.00"
@@ -136,12 +136,12 @@
                         <!--//?tarifa de agua-->
                         <div class="col-md-2">
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Tarifa de agua</label>
+                                <label>Tarifa de agua</label>
                                 <div class="input-group mb-3">
                                     <input type="text" class="form-control" id="tarifa_agua" placeholder="00.00"
                                         name="tarifa_agua" value="10.00" onchange="calcularagua();">
                                     <div class="input-group-append">
-                                        <span class="input-group-text">$</span>
+                                        <span class="input-group-text"><i class="fa fa-dollar-sign"></i></span>
                                     </div>
                                 </div>
 
@@ -150,12 +150,12 @@
                         <!--//?añadir costos extra-->
                         <div class="col-md-2">
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Costos extra</label>
+                                <label>Costos extra</label>
                                 <div class="input-group mb-3">
                                     <input type="text" class="form-control" id="addExtra" placeholder="00.00"
                                         name="addExtra" value="10.00" onchange="calcularExtra();">
                                     <div class="input-group-append">
-                                        <span class="input-group-text">$</span>
+                                        <span class="input-group-text"><i class="fa fa-dollar-sign"></i></span>
                                     </div>
                                 </div>
 
@@ -164,12 +164,12 @@
                         <!--//?añadir luz opcion 2-->
                         <div class="col-md-2">
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Luz opcion 2</label>
+                                <label>Luz opcion 2</label>
                                 <div class="input-group mb-3">
                                     <input type="text" class="form-control" id="addLuz" placeholder="00.00"
                                         name="addLuz" onchange="sumarluzVer2();">
                                     <div class="input-group-append">
-                                        <span class="input-group-text">$</span>
+                                        <span class="input-group-text"><i class="fa fa-dollar-sign"></i></span>
                                     </div>
                                 </div>
 
@@ -180,10 +180,10 @@
                         <!--//?Precio deuda-->
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Deuda Alquiler</label>
+                                <label>Deuda Alquiler</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text">$</span>
+                                        <span class="input-group-text"><i class="fa fa-dollar-sign"></i></span>
                                     </div>
                                     <input type="text" class="form-control" name="deuda" id="deuda"
                                         onchange="sumar();" id="deuda">
@@ -196,10 +196,10 @@
                         <!--//?Precio luz-->
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Servicio de luz</label>
+                                <label>Servicio de luz</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text">$</span>
+                                        <span class="input-group-text"><i class="fa fa-dollar-sign"></i></span>
                                     </div>
                                     <input type="text" class="form-control" name="luz" onchange="sumar();"
                                         id="luz">
@@ -212,10 +212,10 @@
                         <!--//?Precio agua-->
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Servicio de agua</label>
+                                <label>Servicio de agua</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text">$</span>
+                                        <span class="input-group-text"><i class="fa fa-dollar-sign"></i></span>
                                     </div>
                                     <input type="text" class="form-control" name="agua" onchange="sumar();"
                                         id="agua">
@@ -228,10 +228,10 @@
                         <!--//?Precio extra-->
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Servicios extra</label>
+                                <label>Servicios extra</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text">$</span>
+                                        <span class="input-group-text"><i class="fa fa-dollar-sign"></i></span>
                                     </div>
                                     <input type="text" class="form-control" name="extra" onchange="sumar();"
                                         id="extra">
@@ -244,10 +244,10 @@
                         <!--//?Precio total-->
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Total a pagar</label>
+                                <label>Total a pagar</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text">$</span>
+                                        <span class="input-group-text"><i class="fa fa-dollar-sign"></i></span>
                                     </div>
                                     <input type="text" class="form-control" name="total" id="total"
                                         readonly="readonly">
